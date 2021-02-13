@@ -1,4 +1,5 @@
 import React from 'react';
+import searchBar from '../Components/searchBar.js';
 //import Conditions from '../Conditions/weatherDisplay;
 
 // i made a folder so you can put your fetch code etc in here jamell, just to make sure we dont have files all over the place (and ensure good practice!)
@@ -30,7 +31,7 @@ return (
      return (
 <div>
     <h2>What's the weather like today:</h2>
-    <button onClick={getTheWeather}>Show me the Weather</button>
+    <button onClick={searchBar}>Show me the Weather</button>
 </div>
      );
      }
