@@ -9,7 +9,7 @@ function App() {
     <div className = "weather-app">
       <header className = "weather-app">
       </header>
-     <main>
+     <main> 
        <h1>React Weather App</h1>
      </main>
      <footer>
