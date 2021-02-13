@@ -31,7 +31,7 @@ return (
      return (
 <div>
     <h2>What's the weather like today:</h2>
-    <button onClick={searchBar}>Show me the Weather</button>
+    <button onClick={searchBar} type="submit">Show me the Weather</button>
 </div>
      );
      }
@@ -42,7 +42,7 @@ return (
      
 
      return (
-         <button onClick = {getnextWeekWeather}>Next Week</button>
+         <button onClick = {getnextWeekWeather} type="submit">Next Week</button>
      )
  
      }
@@ -55,7 +55,7 @@ return (
 
  return (
 
-     <button onClick={lastWeekWeather}> Last Week</button>
+     <button onClick={lastWeekWeather} type="submit"> Last Week</button>
  )
  }};
 
