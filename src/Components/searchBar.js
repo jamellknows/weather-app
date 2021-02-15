@@ -2,17 +2,18 @@ import React from 'react';
 
 // implement some more features
 
-const searchBar = ({city, setCity }) => {
 
+const searchBar =()=> {
 
-   <form onSubmit ={(e) => {setcity(e); }}>
+   
+   <form >
    <input
     type="text"
     placeholder="Enter a city..."
     autoComplete="off"
-    value={city}
-    onChange={(e) => setCity(e.target.value)}
+    
     />
   </form>
+
 }
-export default searchBar
+export default searchBar;
