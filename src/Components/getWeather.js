@@ -1,24 +1,17 @@
-import React, {useState} from 'react';
 
 
-function getWeather(){
+export function getWeather(){
 
-const [query, setQuery] = useState,{''}
-const [weather, setWeather] = useState,{''};
-
-
-const getTheWeather = event =>{
-
-if (event.key === 13){
+    let weather;
 
     fetch(    )
     .then(res=>res.json())
     .then(result => {
-        setWeather(result);
-        setQuery('');
         console.log(result);
+        weather=result;
     })
-}
-}}
 
-export default getWeather;
+    return weather;
+
+}
+
