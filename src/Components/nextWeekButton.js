@@ -1,11 +1,12 @@
-import React , {useState} from 'react';
+import React  from 'react';
 import {getNextWeather} from './nextWeekWeather.js'
+
 // implement some more features
 
 
 const NextButton =()=> {
 
-  const [query] = useState('')
+ 
 
   const retrieveResult = (event) => {
 if (event.key === 13){
@@ -16,7 +17,7 @@ if (event.key === 13){
   return (
    <button
     onClick={retrieveResult}
-    value= {query}>Next Week Forecast
+    >Next Week Forecast
 
 </button>
   )
