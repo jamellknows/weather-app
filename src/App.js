@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import searchBar from './Components/getWeather.js';
+import SearchBar from './Components/searchBar.js';
 
 
 function App() {
@@ -26,7 +26,7 @@ return (
       </header>
      <main>
        
-<div className = "search-box">{searchBar()}</div> 
+<div className = "search-box"><SearchBar/></div> 
        
        <div className="location">Barnet,UK</div>
        <div className = "temperature">30</div>
@@ -34,12 +34,12 @@ return (
         <div className="date">{dateBuild(new Date())}</div>
       
       <div className = "extra-info-box">
-        Wind: ""
-        Precipitation: ""
-        Humidity: ""
-        Feels like:""
+        <div className = "wind">Wind: ""</div>
+        <div className = "precip">Precipitation: ""</div>
+        <div className = "humidity">Humidity: ""</div>
+        <div className = "feels-like">Feels like:""</div>
       </div>
-      
+
      </main>
      <footer>
        <h6>Created by Jamell, Bev , Kenneth, Meltem and Hazel</h6>
