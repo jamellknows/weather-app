@@ -3,10 +3,10 @@ import React from "react";
 
 const Form = props => {
   return (
-    <div className="container h-100">
+    <div className="form">
       <form onSubmit={props.loadweather}>
         <div>{props.error ? error() : ""}</div>
-        <div className="row">
+        <div className="form-city">
           <div className="col-md-3 offset-md-2">
             <input
               type="text"
@@ -16,7 +16,7 @@ const Form = props => {
               autoComplete="off"
             />
           </div>
-          <div className="col-md-3">
+          <div className="form-country">
             <input
               type="text"
               className="form-control"
@@ -25,7 +25,7 @@ const Form = props => {
               autoComplete="off"
             />
           </div>
-          <div className="col-md-3 mt-md-0 mt-2 text-md-left ">
+          <div className="form-button">
             <button className="btn btn-warning">Get Weather</button>
           </div>
         </div>
@@ -36,7 +36,7 @@ const Form = props => {
 
 const error = props => {
   return (
-    <div className="alert alert-danger mx-5" role="alert">
+    <div className="form-alert" role="alert">
       Please Enter City and Country...!
     </div>
   );
