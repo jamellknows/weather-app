@@ -31,10 +31,7 @@ if (event.key === "Enter"){
 }
 
   }
-  let responseObj;
-  <Conditions
-    responseObj={responseObj}
-               />
+ 
 
   // <div className="main-box">
   //      <div className="location">{weather.name},{weather.sys.country}</div>

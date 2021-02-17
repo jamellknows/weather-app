@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './Components/searchBar.js';
 import NextButton from './Components/nextWeekButton.js';
 import LastButton from './Components/lastWeekButton.js';
+import Conditions from './Conditions/weatherDisplay';
 // import './Conditions/weatherDisplay';
 // import Conditions from './Conditions/weatherDisplay';
 
@@ -26,6 +27,7 @@ return (
 }
   
   return (
+
     <div className = "weather-app">
       <header className = "weather-app">
         <h3>React Weather App</h3>
@@ -37,7 +39,8 @@ return (
 
 <div className = "search-box"><SearchBar/></div> 
        
-      
+<div className = "displayWeather"><Conditions/></div>  
+               
 {/* {(typeof weather.main != "undefined") ? (
        <div className="main-box">
        <div className="location">{weather.name},{weather.sys.country}</div>
@@ -60,6 +63,7 @@ return (
        <h6>Created by Jamell, Bev , Kenneth, Meltem and Hazel</h6>
      </footer>
     </div>
+    
   );
 }
 

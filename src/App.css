@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header{
   text-align: center;
   /* change^^, enter code here */
@@ -5,18 +11,23 @@ header{
 
 
 main {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url('./Images/cold.jpg.jpg');
+  padding: 25px;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
 }
 
 footer{
   /* insert code here */
+}
+
+.app.warm{
+  background-image: url('./Images/warm.jpg.jpg');
+}
+.app.cold{
+  background-image: url('./Images/cold.jpg.jpg');
 }
 
 
