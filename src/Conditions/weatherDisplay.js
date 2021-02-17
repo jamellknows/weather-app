@@ -1,27 +1,33 @@
-//weather display code in here so i can export to app.js
 
-import React from 'react';
-const Conditions = (props) => {
-   return (
-     
-       <div>
-           {props.responseObj === 200 ?
-               <div>
-                   <p><strong>{props.responseObj.name},{props.responseObj.sys.name}</strong></p>
-                   <p> {Math.round(props.responseObj.main.temp)}&&deg </p>
-                   <p>{props.responseObj.weather[0].description}.</p>
-               </div>
-           : null
-           }
-           {/* <div className = {
-  (typeof Response.main.weather != "undefined"
-  ? ((Response.main.temp >16)
-  ? 'app warm'
-  :'app')
-  : 'app')}></div> */}
-           
-       </div>
-       
-   )
-}
-export default Conditions;
+import GetWeather from '../Components/getWeather.js'
+
+// struggling to add imports here...
+   const dateBuild = (D) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; 
+  
+  let day = days[D.getDay()];
+  let date = D.getDate();
+  let month = months[D.getMonth()];
+  let year = D.getFullYear();
+
+return (
+ `${day} ${date} ${month} ${year}`
+)}
+  
+<div  
+  {(typeof weather.main != "undefined") ? (
+    <div>
+      <div className="location-box">
+        <div className="location">{weather.name}, {weather.sys.country}</div>
+        <div className="date">{dateBuild(new Date())}</div>
+      </div>
+      <div className="weather-box">
+        <div className="temp">
+          {Math.round(weather.main.temp)}°c
+        </div>
+        <div className="weather">{weather.weather[0].main}</div>
+        <div className="description">{weather.weather[0].description}</div>
+      </div>
+    </div>
+    ) : ('')}
