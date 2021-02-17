@@ -7,10 +7,12 @@ const api ={
   
   }
 
-  const GetWeather =() => {
+  const GetWeather =(props) => { 
 
 const [query, setQuery] = useState('');
 const [weather,setWeather] =useState({});
+
+
 
 const retrieveResult = (event) => {
   if (event.key === "Enter"){
@@ -23,18 +25,9 @@ const retrieveResult = (event) => {
    })
   }
     };
-    const error=()=>{
-      return(
-
-        <div className="form-alert" role="alert">
-         alert("Please enter a city!!");
-        </div>
-       
-       ) };
-
+    return(
        
        <div className="search-box">
-       <div>{error? error(): ""}
     <input
      type="text"
      placeholder="Enter a city..."
@@ -44,7 +37,6 @@ const retrieveResult = (event) => {
      value= {query}
      />
      </div>
- </div>
-}
+)}
 
     export default GetWeather

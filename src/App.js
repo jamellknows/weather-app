@@ -60,6 +60,7 @@ return (
           <div>{error? error(): ""}
        <input
         type="text"
+        className="searchbar"
         placeholder="Enter a city..."
         autoComplete="off"
         onChange={e => setQuery(e.target.value)}
