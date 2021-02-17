@@ -1,9 +1,16 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import './App.css';
 import SearchBar from './Components/searchBar.js';
+import NextButton from './Components/nextWeekButton.js';
+import LastButton from './Components/lastWeekButton';
+// import './Conditions/weatherDisplay';
+// import Conditions from './Conditions/weatherDisplay';
+
 
 
 function App() {
+
+  const [weather] = useState({});
 
   const dateBuild = (D) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -26,13 +33,22 @@ return (
       </header>
      <main>
        
+       <div className= "nextWeekButton"><NextButton/></div>
+       <div className="lastWeekButton"><LastButton/></div>
+
 <div className = "search-box"><SearchBar/></div> 
        
-       <div className="location">Barnet,UK</div>
-       <div className = "temperature">30</div>
-       <div className="description">sunny</div>
-        <div className="date">{dateBuild(new Date())}</div>
       
+{/* {(typeof weather.main != "undefined") ? (
+       <div className="main-box">
+       <div className="location">{weather.name},{weather.sys.country}</div>
+       <div className = "temperature">{Math.round(weather.main.temp)}</div>
+       <div className="description">{weather.weather.main[0].main}</div> */}
+        <div className="date">{dateBuild(new Date())}</div>
+      {/* </div>
+  ) : ('')} */}
+  
+
       <div className = "extra-info-box">
         <div className = "wind">Wind: ""</div>
         <div className = "precip">Precipitation: ""</div>
