@@ -1,8 +1,8 @@
-import React ,{useState} from 'react';
+import React from 'react';
 import './App.css';
 import SearchBar from './Components/searchBar.js';
 import NextButton from './Components/nextWeekButton.js';
-import LastButton from './Components/lastWeekButton';
+import LastButton from './Components/lastWeekButton.js';
 // import './Conditions/weatherDisplay';
 // import Conditions from './Conditions/weatherDisplay';
 
@@ -10,7 +10,6 @@ import LastButton from './Components/lastWeekButton';
 
 function App() {
 
-  const [weather] = useState({});
 
   const dateBuild = (D) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

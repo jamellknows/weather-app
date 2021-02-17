@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 // import {GetWeather} from './getWeather.js';
+import Conditions from '../Conditions/weatherDisplay.js'
 
 // implement some more features
 
@@ -30,12 +31,17 @@ if (event.key === "Enter"){
 }
 
   }
+  let responseObj;
+  <Conditions
+    responseObj={responseObj}
+               />
 
-  <div className="main-box">
-       <div className="location">{weather.name},{weather.sys.country}</div>
-       <div className = "temperature">{Math.round(weather.main.temp)}</div>
-       <div className="description">{weather.weather.main[0].main}</div>
-      </div>
+  // <div className="main-box">
+  //      <div className="location">{weather.name},{weather.sys.country}</div>
+  //      <div className = "temperature">{Math.round(weather.main.temp)}</div>
+  //      <div className="description">{weather.weather.main[0].main}</div>
+  //     </div>
+
 
   return (
     <div>{props.error ? error() : ""}
@@ -47,6 +53,7 @@ if (event.key === "Enter"){
     onKeyPress= {retrieveResult}
     value= {query}
     />
+    
 </div>
 
 
