@@ -1,17 +1,38 @@
+import React, {useState} from 'react';
 
+const api ={
+    key:"cc67b19dc916f461ab3e7d8d3c68bb27",
+    base:"https://api.openweathermap.org/data/2.5/"
+  }
 
-export function getWeather(){
+const GetWeather =(props) => { 
 
-    let weather;
+const [query, setQuery] = useState('');
+const [weather,setWeather] =useState({});
 
-    fetch(    )
-    .then(res=>res.json())
-    .then(result => {
-        console.log(result);
-        weather=result;
-    })
+const retrieveResult = (event) => {
+  if (event.key === "Enter"){
+    fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      .then(res=>res.json())
+      .then(result => {
+          setQuery('');
+          setWeather(result);
+          console.log(result);         
+   })
+  }
+    };
+    return(
+       
+       <div className="search-box">
+    <input
+     type="text"
+     placeholder="Enter a city..."
+     autoComplete="off"
+     onChange={e => setQuery(e.target.value)}
+     onKeyPress= {retrieveResult}
+     value= {query}
+     />
+     </div>
+)}
 
-    return weather;
-
-}
-
+    export default GetWeather
