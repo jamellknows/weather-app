@@ -12,7 +12,7 @@
  
  
 ### Install
-* git clone https://github.com/BevAntwi98/weather-app
+* git clone https://github.com/Bjamellknows/weather-app
 * cd weather-app
 * npm install & npm start
 
