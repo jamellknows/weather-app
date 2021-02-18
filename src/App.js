@@ -54,12 +54,16 @@ return (
       <header className = "weather-app">
         <h3>React Weather App</h3>
       </header>
-      <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+
+      <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16 ) ? 'app warm' : 'app' && ((weather.main.temp < 5) ? 'app snow' : 'app' )) :'app'}>
+
+{/* <div className={(typeof weather.main != "undefined") ? ((weather.main.temp < 5) ? 'app snow' : 'app') */}
+        {/* : 'app'}> */}
 
      <main>
        
         <div className="search-box">
-          <div>{error? error(): ""}
+          <div>{error? error(): "Hey! Enter a city to get started"}
        <input
         type="text"
         className="searchbar"
@@ -81,7 +85,6 @@ return (
             <div className="location">{weather.name}, {weather.sys.country}</div>
             <div className="date">{dateBuild(new Date())}</div>
             <div className="temp"> {Math.round(weather.main.temp)}°c</div>
-            <div className = "icon">{weather.main.icon}</div>
             <div className="weather">{weather.weather[0].main}</div>
             <div className="description">{weather.weather[0].description}</div>
             </div>
@@ -102,7 +105,9 @@ return (
      <footer className= "footer">
        <h4>Created by Jamell, Bev , Kenneth, Meltem and Haze</h4>
      </footer>
-    </div> </div>
+    </div> 
+    </div>
+  
   ); 
 }
 export default App
