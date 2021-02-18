@@ -54,7 +54,8 @@ return (
       <header className = "weather-app">
         <h3>React Weather App</h3>
       </header>
-      <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'warm' : 'app') : 'app'}>
+      <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+
      <main>
        
         <div className="search-box">
@@ -74,32 +75,32 @@ return (
        {/* <div className= "button"><NextButton/></div> */}
                
 {(typeof weather.main != "undefined") ? (
-        <div>
+        
           <div className="location-box">
+            <div className="main-box">
             <div className="location">{weather.name}, {weather.sys.country}</div>
             <div className="date">{dateBuild(new Date())}</div>
-          </div>
-          <div className="weather-box">
             <div className="temp"> {Math.round(weather.main.temp)}°c</div>
             <div className = "icon">{weather.main.icon}</div>
             <div className="weather">{weather.weather[0].main}</div>
             <div className="description">{weather.weather[0].description}</div>
-             <div className = "extra-info-box">
+            </div>
+        
+      <div className = "extra-info-box">
       <div className = "feels-like">Feels like: {weather.main.feels_like}°c </div> 
        <div className = "humidity">Humidity: {weather.main.humidity}%</div>
        <div className = "pressure">Pressure: {weather.main.pressure}hPa</div>
         <div className = "wind">Wind: {weather.wind.speed}mph </div>        
       </div>
           </div>
-        </div>
-
+    
         
         ) : ('')}
 
      
      </main>
      <footer className= "footer">
-       <h6>Created by Jamell, Bev , Kenneth, Meltem and Hazel</h6>
+       <h4>Created by Jamell, Bev , Kenneth, Meltem and Haze</h4>
      </footer>
     </div> </div>
   ); 
