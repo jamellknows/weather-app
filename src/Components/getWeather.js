@@ -1,18 +1,14 @@
 import React, {useState} from 'react';
 
 const api ={
-
     key:"cc67b19dc916f461ab3e7d8d3c68bb27",
     base:"https://api.openweathermap.org/data/2.5/"
-  
   }
 
-  const GetWeather =(props) => { 
+const GetWeather =(props) => { 
 
 const [query, setQuery] = useState('');
 const [weather,setWeather] =useState({});
-
-
 
 const retrieveResult = (event) => {
   if (event.key === "Enter"){
